@@ -16,3 +16,19 @@ function agregarAmigo() {
       mostrarListaAmigo();
     }
   }
+
+  /**
+   * Actualiza la visualización de la lista de amigos en el DOM, creando elementos <li> para cada amigo.
+   */
+  function mostrarListaAmigo() {
+    let listaAmigos = document.querySelector("#listaAmigos");
+    listaAmigos.innerHTML = "";
+  
+    for (let index = 0; index < amigos.length; index++) {
+      const element = amigos[index];
+  
+      let listaHTML = document.createElement("li");
+      listaHTML.textContent = element;
+      listaAmigos.appendChild(listaHTML);
+    }
+  }
