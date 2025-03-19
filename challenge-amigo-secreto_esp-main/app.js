@@ -32,3 +32,17 @@ function agregarAmigo() {
       listaAmigos.appendChild(listaHTML);
     }
   }
+  /**
+   * Sortea y muestra un amigo de la lista de amigos de manera aleatoria.
+   * Verifica que la lista no esté vacía antes de realizar el sorteo.
+   */
+  function sortearAmigo() {
+    let cantidadAmigos = amigos.length;
+    if (cantidadAmigos === 0) {
+      alert("Por favor, inserte un nombre antes de sortear");
+    } else {
+      let indiceAmigo = Math.floor(Math.random() * cantidadAmigos);
+      let resultadoHTML = document.querySelector("#resultado");
+      resultadoHTML.innerHTML = amigos[indiceAmigo];
+    }
+  }
